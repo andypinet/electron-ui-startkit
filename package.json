@@ -1,8 +1,10 @@
 {
   "name": "electron-ui-startkit",
-  "description": "Simple TODO application built with Electron and AngularJS.",
+  "description": "electon ui startkit",
   "scripts": {
     "postinstall": "install-app-deps",
+    "buildapp": "bower install && cd app && npm install --production && cd ..",
+    "workapp":"cd app && npm install && cd ..",
     "start": "./node_modules/.bin/electron ./app --enable-logging --remote-debugging-port=9222",
     "dev": "NODE_ENV='development' npm run start",
     "pack": "npm run pack:osx && npm run pack:win",
@@ -23,7 +25,7 @@
     "mac": "npm run dist:osx",
     "win": "npm run dist:win"
   },
-  "author": "Vjekoslav Ratkajec",
+  "author": "andypinet",
   "devDependencies": {
     "electron-builder": "^3.20.0",
     "electron-prebuilt": "^1.0.2"
@@ -31,7 +33,6 @@
   "build": {
     "app-bundle-id": "hr.creaticon.electron-ui-startkit",
     "app-category-type": "public.app-category.productivity",
-    "iconUrl": "http://electron-ui-startkit.s3.amazonaws.com/icon.ico",
     "osx": {
       "title": "EA Todo",
       "background": "build/background.png",
