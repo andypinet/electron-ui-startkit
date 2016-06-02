@@ -16,8 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "webcomponentsjs": "^0.7.22",
-    "hammerjs": "https://github.com/hammerjs/hammer.js.git#^2.0.8",
-    "Swipe": "https://github.com/thebird/Swipe.git#^2.0.0"
+    "webcomponentsjs": "^0.7.22"
   }
 }
