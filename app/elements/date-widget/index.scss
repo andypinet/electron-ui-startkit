@@ -1,0 +1,10 @@
+@mixin com-zhilizhili-ui-package-hello-world-index($options: ()) {
+    $selector: unquote("[zl-datawidget]");
+    $com-zhilizhili-site-webcomponents-startkit-element--zl-datawidget: (
+        selector: $selector
+    ) !global;
+    
+    #{$selector} {
+        color: #00A000;
+    }
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Document</title>
+    <script src="bower_components/iscroll/build/iscroll.js"></script>
+    <script src="bower_components/hammerjs/hammer.min.js"></script>
+    <script src="bower_components/Swipe/swipe.js"></script>
+    <style>
+        html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+            margin:0;
+            padding:0;
+            border:0;
+            outline:0;
+            font-size:100%;
+            vertical-align:baseline;
+            background:transparent;
+        }
+        body {
+            -webkit-text-size-adjust:none;
+            font-family:sans-serif;
+            min-height:416px;
+        }
+        h1 {
+            font-size:33px;
+            margin:50px 0 15px;
+            text-align:center;
+            color:#212121;
+        }
+        h2 {
+            font-size:14px;
+            font-weight:bold;
+            color:#3c3c3c;
+            margin:20px 10px 10px;
+        }
+        small {
+            margin:0 10px 30px;
+            display:block;
+            font-size:12px;
+        }
+        a {
+            margin:0 0 0 10px;
+            font-size:12px;
+            color:#3c3c3c;
+        }
+
+
+        html, body {
+            background: #f3f3f3;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body ms-controller="IndexControllder">
+<style>
+    body {
+        height: 1200px;
+    }
+
+    .swipe {
+        background-color: #fff;
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+        top:120px;
+    }
+    .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+    }
+    .swipe-wrap > div {
+        float:left;
+        width:100%;
+        position: relative;
+        height: 180px;
+    }
+</style>
+    <main id="wrapper">
+        <div id="srcoller">
+            <div id='slider' class='swipe'>
+                <div class='swipe-wrap'>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    window.mySwipe = Swipe(document.getElementById('slider'));
+
+    window.onload = function () {
+        var myElement = document.getElementById('slider');
+
+        // create a simple instance
+        // by default, it only adds horizontal recognizers
+        var mc = new Hammer(myElement);
+
+        // listen to events...
+        // 向左滑动 向右滑动 不能触发浏览器滑动
+        mc.on("panleft panright", function(ev) {
+            console.log(ev.type +" gesture detected.");
+            ev.srcEvent.stopPropagation();
+            ev.srcEvent.preventDefault();
+        });
+    }
+</script>
+</html>
