@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "webcomponentsjs": "^0.7.22"
+    "webcomponentsjs": "^0.7.22",
+    "hammerjs": "https://github.com/hammerjs/hammer.js.git#^2.0.8"
   }
 }
