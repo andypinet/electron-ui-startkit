@@ -33,8 +33,9 @@
   "build": {
     "app-bundle-id": "hr.creaticon.electron-ui-startkit",
     "app-category-type": "public.app-category.productivity",
+    "iconUrl": "http://eatodo.s3.amazonaws.com/icon.ico",
     "osx": {
-      "title": "EA Todo",
+      "title": "electron-ui-startkit",
       "background": "build/background.png",
       "icon": "build/icon.icns",
       "icon-size": 128,

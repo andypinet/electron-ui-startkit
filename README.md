@@ -2,6 +2,10 @@
 
 build
 
+```
+npm install -g bower
+```
+
 mac
 
 ```
